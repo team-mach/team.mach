@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: theme("colors.graphite.DEFAULT");
+  }
+
+  ::selection {
+    background: theme("colors.aerospace.500");
+    color: theme("colors.ink.DEFAULT");
+  }
+
+  /* Visible keyboard focus everywhere — no silent focus loss */
+  :focus-visible {
+    outline: 2px solid theme("colors.aerospace.glow");
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .eyebrow {
+    @apply font-mono text-xs uppercase tracking-eyebrow text-aerospace-glow;
+  }
+
+  .panel {
+    @apply relative bg-titanium-700/70 backdrop-blur-sm border border-line rounded-xl shadow-panel;
+  }
+
+  .panel-glow {
+    @apply relative bg-titanium-700/70 backdrop-blur-sm border border-violet-500/25 rounded-xl shadow-glow;
+  }
+
+  .grid-bg {
+    background-image: theme("backgroundImage.grid-overlay");
+    background-size: theme("backgroundSize.grid");
+  }
+
+  /* Soft ambient blobs used behind hero / section content */
+  .glow-orb {
+    @apply pointer-events-none absolute rounded-full blur-3xl opacity-60;
+    background: theme("backgroundImage.glow-radial");
+  }
+}
