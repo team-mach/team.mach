@@ -22,9 +22,10 @@ export function Home() {
       {/* Hero */}
       <section className="relative overflow-hidden border-b border-line">
         <GlowBackdrop />
-        <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-20 md:pb-32">
-          <Logo className="h-[240px] w-auto mb-[-8px] md:mb-0" />
-
+        <div className="relative mx-auto max-w-7xl px-6 pt-8 pb-24 md:pt-1 md:pb-32">
+          <div className="mb-10 md:mb-4">
+  <Logo className="h-124 w-auto" />
+</div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
               <p className="font-display text-lg md:text-xl font-semibold tracking-[0.2em] text-ink-muted">              LIFTED BY{" "}
