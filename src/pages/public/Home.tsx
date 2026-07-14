@@ -23,7 +23,7 @@ export function Home() {
       <section className="relative overflow-hidden border-b border-line">
         <GlowBackdrop />
         <div className="relative mx-auto max-w-7xl px-6 pt-16 pb-24 md:pt-20 md:pb-32">
-          <Logo className="h-[240px] w-auto mb-[-90px] ml-[-20px]" />
+          <Logo className="h-[240px] w-auto mb-[-8px] md:mb-0" />
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
